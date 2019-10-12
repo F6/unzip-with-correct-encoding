@@ -10,6 +10,8 @@ current_default_encoding = 'cp437'          # Code Page 437, i.e. DOS Latin US, 
 # current_default_encoding = 'shift-jis'    # Japenese envs, used in some Japenese versions of Windows
 # current_default_encoding = 'utf-8'        # used in most linux distros
 
+original_encoding = 'gb18030'
+
 def unzip(f, encoding, v):
     print("Trying to unzip file " + f + " with encoding " + encoding + '...')
     try:
@@ -35,4 +37,4 @@ def unzip(f, encoding, v):
 
 if __name__ == '__main__':
     for i in sys.argv[1:]:
-        unzip(i, 'gb18030', True)
+        unzip(i, original_encoding, True)
